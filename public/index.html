@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="hi"
+    />
+    <title>Uranium</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/chemical.js"></script>
+    <script src="/chemical.components.js"></script>
+  </head>
+  <body>
+<style>
+  h1 {
+    color: #39FF14;
+    font-family: Arial, sans-serif;
+  }
+</style>
+
+<h1>Uranium</h1>
+    <input
+      autofocus
+      spellcheck="false"
+      autocomplete="off"
+      id="search"
+      data-frame="web"
+      data-auto-https
+      data-search-engine="https://www.google.com/search?q=%s"
+      placeholder="Search or Enter a URL"
+      is="chemical-input"
+    />
+    <section id="controls" is="chemical-controls">
+      <button onclick="chemical.componentAction('back', 'web')">Back</button>
+      <button onclick="chemical.componentAction('forward', 'web')">
+        Forward
+      </button>
+      <button onclick="chemical.componentAction('reload', 'web')">
+        Reload
+      </button>
+      <button onclick="chemical.componentAction('close', 'web')">Close</button>
+    </section>
+    <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+  </body>
+</html>
